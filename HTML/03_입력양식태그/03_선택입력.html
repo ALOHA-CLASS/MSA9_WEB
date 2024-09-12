@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택 입력</title>
+</head>
+<body>
+    <h1>선택 입력</h1>
+    <h2>라디오/체크박스</h2>
+
+    <h3>radio - 성별</h3>
+    <label for="female">여자</label>
+    <input type="radio" name="gender" id="female" value="female">
+
+    <label for="male">남자</label>
+    <input type="radio" name="gender" id="male" value="male">
+    <br>
+
+    <h3>checkbox - 취미</h3>
+    <label for="exercise">운동</label>
+    <input type="checkbox" name="hobby" id="exercise" value="exercise">
+
+    <label for="music">음악</label>
+    <input type="checkbox" name="hobby" id="music" value="music">
+
+    <label for="movie">영화</label>
+    <input type="checkbox" name="hobby" id="movie" value="movie">
+    <br>
+
+    <h3>select - 이메일입력</h3>
+    <label for="email">이메일</label> <br>
+    <input type="text" name="emailId" id="email">
+    @
+    <select name="domain" id="domain">
+        <option value="1">naver.com</option>
+        <option value="2">gmail.com</option>
+        <option value="3">kakao.com</option>
+        <option value="4">nate.com</option>
+    </select>
+
+    <div style="height: 500px;"></div>
+</body>
+</html>
