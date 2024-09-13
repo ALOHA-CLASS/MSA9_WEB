@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sematic Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: black;
+            height: 60px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            float: left;
+            display: block;
+            width: 100px;
+            height: 100%;
+            line-height: 60px;
+            text-align: center;
+        }
+
+        nav a:hover { background-color: cornflowerblue; }
+
+        section {
+            margin: 0 auto;
+            width: 1024px;
+            background-color: lightblue;
+            border: 1px solid black;
+            padding: 10px;
+            min-height: 200px;
+        }
+
+        footer {
+            background-color: lightgray;
+            min-height: 80px;
+        }
+
+        footer .copy {
+            float: left;
+            line-height: 80px;
+            padding: 0 20px;
+        }
+
+        footer .family {
+            float: right;
+            line-height: 80px;
+            min-width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sematic Layout</h1>
+    <header>
+        <nav>
+            <a href="http://naver.com">네이버</a>
+            <a href="http://kakao.com">카카오</a>
+            <a href="http://youtube.com">유튜브</a>
+        </nav>
+    </header>
+
+    <section>
+        <h1>My Page</h1>
+        <p>My Page 에 오신 것을 환영합니다. :P</p>
+    </section>
+
+    <section>
+        <h1>2번째 섹션</h1>
+        <p>2번째 영역 입니다</p>
+        <article>
+            모든 국민은 양심의 자유를 가진다. 공개하지 아니한 회의내용의 공표에 관하여는 법률이 정하는 바에 의한다. 정당은 그 목적·조직과 활동이 민주적이어야 하며, 국민의 정치적 의사형성에 참여하는데 필요한 조직을 가져야 한다. 국회나 그 위원회의 요구가 있을 때에는 국무총리·국무위원 또는 정부위원은 출석·답변하여야 하며, 국무총리 또는 국무위원이 출석요구를 받은 때에는 국무위원 또는 정부위원으로 하여금 출석·답변하게 할 수 있다.
+            모든 국민은 양심의 자유를 가진다. 공개하지 아니한 회의내용의 공표에 관하여는 법률이 정하는 바에 의한다. 정당은 그 목적·조직과 활동이 민주적이어야 하며, 국민의 정치적 의사형성에 참여하는데 필요한 조직을 가져야 한다. 국회나 그 위원회의 요구가 있을 때에는 국무총리·국무위원 또는 정부위원은 출석·답변하여야 하며, 국무총리 또는 국무위원이 출석요구를 받은 때에는 국무위원 또는 정부위원으로 하여금 출석·답변하게 할 수 있다.
+            모든 국민은 양심의 자유를 가진다. 공개하지 아니한 회의내용의 공표에 관하여는 법률이 정하는 바에 의한다. 정당은 그 목적·조직과 활동이 민주적이어야 하며, 국민의 정치적 의사형성에 참여하는데 필요한 조직을 가져야 한다. 국회나 그 위원회의 요구가 있을 때에는 국무총리·국무위원 또는 정부위원은 출석·답변하여야 하며, 국무총리 또는 국무위원이 출석요구를 받은 때에는 국무위원 또는 정부위원으로 하여금 출석·답변하게 할 수 있다.
+        </article>
+    </section>
+
+    <section>
+        <h1>3번째 섹션</h1>
+        <p>3번째 섹션입니다.</p>
+    </section>
+
+    <footer>
+        <p class="copy">Copyright &copy; ALOHA CLASS. All Rights Reserved</p>
+        <p class="family">
+            <select name="family" id="family">
+                <option value="1">네이버</option>
+                <option value="2">카카오</option>
+                <option value="3">유튜브</option>
+            </select>
+        </p>
+    </footer>
+</body>
+</html>
