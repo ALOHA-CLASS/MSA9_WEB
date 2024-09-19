@@ -2,7 +2,7 @@
 
 .background-example {
     background-color: lightblue;
-    background-image: url('img/background.jpg');
+    background-image: url('../img/background.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

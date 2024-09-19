@@ -1,8 +1,8 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 .background-example {
-    background-color: lightblue;
-    background-image: url('img/background.jpg');
+    background-color: burlywood;
+    background-image: url('../img/background.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
