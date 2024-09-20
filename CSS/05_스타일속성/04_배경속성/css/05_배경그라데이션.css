@@ -1,0 +1,127 @@
+
+* { margin: 0; padding: 0; text-align: center; }
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+.bottom {
+    background: linear-gradient(to bottom, yellow, orange, red);
+}
+.top {
+    background: linear-gradient(to top, yellow, orange, red);
+}
+.left {
+    background: linear-gradient(to left, yellow, orange, red);
+}
+.right {
+    background: linear-gradient(to right, yellow, orange, red);
+}
+
+.instar {
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+.top-left {
+    background: linear-gradient(to top left, #8a3ab9 0%, #cd486b 45%, #fbad50 80%, #fccc63 95%);
+}
+
+.top-right {
+    background: linear-gradient(to top right, #8a3ab9 0%, #cd486b 45%, #fbad50 80%, #fccc63 95%);
+}
+
+.bottom-left {
+    background: linear-gradient(to bottom left, #8a3ab9 0%, #cd486b 45%, #fbad50 80%, #fccc63 95%);
+}
+
+.bottom-right {
+    background: linear-gradient(to bottom right, #8a3ab9 0%, #cd486b 45%, #fbad50 80%, #fccc63 95%);
+}
+
+
+/* -----------------------------------------------------------------------------------*/
+/* 모양 */
+.ellipse {
+    background: 
+        radial-gradient(ellipse, #574b90 0%, white 50%, #c44569 100%);
+}
+
+.circle {
+    background: 
+        radial-gradient(circle, #f8a5c2 0%, white 50%, #63cdda 100%);
+}
+
+/* 사이즈 */
+.closest-corner {
+    background: 
+        radial-gradient(closest-corner at 60% 55%, blue, green, yellow, black);
+}
+
+.closest-side {
+    background: 
+        radial-gradient(closest-side at 60% 55%, blue, green, yellow, black);
+}
+
+.farthest-corner {
+    background: 
+        radial-gradient(farthest-corner at 60% 55%, blue, green, yellow, black);
+}
+
+.farthest-side {
+    background: 
+        radial-gradient(farthest-side at 60% 55%, blue, green, yellow, black);
+}
+
+
+/* 중첩(누적) 그라디언트 */
+.stacked-radial {
+    background: 
+        radial-gradient(circle at 50% 0, rgba(255,0,0, 0.5), rgba(255,0,0,0) 70%),
+        radial-gradient(circle at 7% 75%, rgba(0,0,255, 0.5), rgba(255,0,0,0) 70%),
+        radial-gradient(circle at 93% 75%, rgba(0,255,0, 0.5), rgba(255,0,0,0) 70%);
+}
+
+
+
+
+/* -----------------------------------------------------------------------------------*/
+.simple {
+    background: 
+        conic-gradient(red, yellow, green, blue, black);
+}
+
+.degree {
+    background: 
+        conic-gradient(red 45deg, yellow 90deg, green 210deg);
+}
+
+.pie {
+    background: 
+        conic-gradient( red 0deg, red 90deg,
+                        yellow 90deg, yellow 180deg,
+                        green 180deg, green 270deg,
+                        blue 270deg  );
+    border-radius: 50%;
+}
+
+.pie2 {
+    background: 
+        conic-gradient( red, yellow, green, blue, black  );
+    border-radius: 50%;
+}
+
+.position {
+    background: 
+        conic-gradient(at 70% 75%, red, yellow, green);
+}
