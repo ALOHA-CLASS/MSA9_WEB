@@ -1,0 +1,33 @@
+
+* { margin: 0; padding: 0; }
+
+.ball {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: royalblue;
+    border-radius: 50%;
+    color: white;
+    line-height: 200px;
+    text-align: center;
+
+    /* 애니메이션 */
+    animation-name: ball;               /* 애니메이션 이름 */
+    animation-duration: 4s;             /* 지속시간 : 4초 */
+    animation-timing-function: linear;  /* 타이밍 함수 : 일정한 속도 */
+    animation-iteration-count: infinite;       /* 반복횟수 : 3 or infinite (무한) */
+}
+
+/* 애니메이션 변경 시점을 지정하는 앳규칙(@) */
+/* @keyframes 애니메이션이름 */
+@keyframes ball {
+    /* 시작시점 : 0% or from */
+    /* 종료시점 : 100% or to */
+    0% { left: 0; }
+    50% { 
+        left: calc(100% - 200px); 
+        transform: rotate( calc(360deg * 2) ); 
+    }
+    100% { left: 0; }
+    /* 공이 튕겼다가 다시 돌아오도록 변경해보세요! */
+}

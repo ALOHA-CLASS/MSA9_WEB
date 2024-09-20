@@ -1,0 +1,23 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.background {
+    background-color: lightblue;
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800px;
+    margin: 800px auto;
+    /* 텍스트 마스크 속성 */
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    text-align: center;
+    font-size: 200px;
+    font-weight: bold;
+}
+
+/* .wrapper {
+    background-color: black;
+} */
