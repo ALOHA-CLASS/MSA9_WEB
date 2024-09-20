@@ -1,19 +1,24 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
-.background-example {
+.background {
     background-color: burlywood;
-    background-image: url('../img/background.jpg');
+    background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
-    margin: 800px auto;
+    background-attachment: fixed;   /* 고정 배경 */
     height: 600px;
-    color: white;
+    margin: 800px auto;
 }
 
 .content {
     font-size: 200px;
+    color: white;
     margin: 0 auto;
     text-align: center;
 }
+

@@ -1,0 +1,18 @@
+
+.container {
+    position: relative;
+    width: 1200px;
+    border: 3px dashed orange;
+    margin: auto;
+}
+
+section {
+    margin-top: 20px;           /* mt20 ⬆ */
+    margin-right: 40px;         /* mr40 ➡ */
+    margin-bottom: 80px;        /* mb80 ⬇ */
+    margin-left: 160px;         /* ml160 ⬅ */
+    width: 200px;               /* w200 ↔ */
+    height: 200px;              /* h200 ↕ */
+    display: inline-block;      /* dib 🍗 */
+    border: 3px solid gray;   /* border 🟩 */
+}

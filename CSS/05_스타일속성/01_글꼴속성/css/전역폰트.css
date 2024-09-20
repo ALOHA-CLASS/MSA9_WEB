@@ -1,0 +1,12 @@
+:root {
+    --main-font: 'Roboto', sans-serif;
+    --highlight-font: 'Georgia', serif;
+}
+
+html {
+    font-family: var(--main-font);  /* 전체에 메인 폰트 적용 */
+}
+
+h1, h2, .highlight {
+    font-family: var(--highlight-font);  /* 헤딩이나 특정 강조 요소에 강조 폰트 적용 */
+}
