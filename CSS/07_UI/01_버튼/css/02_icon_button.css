@@ -1,0 +1,22 @@
+* { box-sizing: border-box; }
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding-block: 0;
+    padding-inline: 0;
+    padding: 12px 16px;
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btn:hover { background-color: dodgerblue; }
+
+.btn i { font-size: 20px !important; }
+
+a.btn { font-size: 14px; }
+
+.icon-box { margin: 20px 0; }
