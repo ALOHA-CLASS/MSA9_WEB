@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board</title>
+    <!-- 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <input type="checkbox" name="bars" id="bars">
+
+    <!-- 플로팅 버튼 -->
+    <div class="floating">
+        <a href="#top"><i class="fa fa-arrow-circle-up"></i></a>
+    </div>
+
+    <!-- 사이드바 -->
+    <div class="sidebar">
+        <ul class="sidemenu">
+            <li>
+                <a href="">
+                    <h3>사이드바</h3>
+                    <p>사이드바 메뉴 설명</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <h3>사이드바</h3>
+                    <p>사이드바 메뉴 설명</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <h3>사이드바</h3>
+                    <p>사이드바 메뉴 설명</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <h3>사이드바</h3>
+                    <p>사이드바 메뉴 설명</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 헤더 -->
+    <header>
+        <!-- util -->
+        <div class="util">
+            <ul class="util-menu">
+                <li><a href="">로그인</a></li>
+                <li><a href="">회원가입</a></li>
+            </ul>
+        </div>
+        <!-- menu -->
+        <div class="menu">
+            <div class="menu-left">
+                <a href=""><i class="fa fa-user"></i></a>
+            </div>
+            <div class="menu-center">
+                <nav class="pc">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="board.html">Board</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-right">
+                <a href="javascript:;">
+                    <label for="bars" class="bars">
+                        <span class="bar top"></span>
+                        <span class="bar mid"></span>
+                        <span class="bar bottom"></span>
+                    </label>
+                </a>
+            </div>
+        </div>
+
+    </header>
+    
+    <!-- 메인 -->
+    <div class="container">
+        <section>
+            <h1 class="main-title">게시판</h1>
+            <!-- 검색창 -->
+            <div class="search-filter">
+                <div class="item">
+                    <select class="filter-select">
+                        <option value="0">전체</option>
+                        <option value="1">제목+내용</option>
+                        <option value="2">제목</option>
+                        <option value="3">작성자</option>
+                        <option value="4">내용</option>
+                    </select>
+                    <input type="text" placeholder="검색어를 입력하세요" class="search-input">
+                    <button class="search-button">검색</button>
+                </div>
+                <div class="item">
+                    <select class="filter-select">
+                        <option value="5">5개씩</option>
+                        <option value="10">10개씩</option>
+                        <option value="20">20개씩</option>
+                        <option value="30">30개씩</option>
+                        <option value="40">40개씩</option>
+                        <option value="50">60개씩</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 게시판 목록 -->
+            <table class="board-list">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>게시물 제목 1</td>
+                        <td>작성자1</td>
+                        <td>2024-09-24</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>게시물 제목 2</td>
+                        <td>작성자2</td>
+                        <td>2024-09-23</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>게시물 제목 3</td>
+                        <td>작성자3</td>
+                        <td>2024-09-22</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>게시물 제목 4</td>
+                        <td>작성자4</td>
+                        <td>2024-09-21</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>게시물 제목 5</td>
+                        <td>작성자5</td>
+                        <td>2024-09-20</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>게시물 제목 6</td>
+                        <td>작성자6</td>
+                        <td>2024-09-19</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>게시물 제목 7</td>
+                        <td>작성자7</td>
+                        <td>2024-09-18</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>게시물 제목 8</td>
+                        <td>작성자8</td>
+                        <td>2024-09-17</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>게시물 제목 9</td>
+                        <td>작성자9</td>
+                        <td>2024-09-16</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>게시물 제목 10</td>
+                        <td>작성자10</td>
+                        <td>2024-09-15</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+
+            <!-- 페이지네이션 -->
+            <div class="pagination">
+                <a href="#" class="page-link">≪</a>
+                <a href="#" class="page-link">＜</a>
+                <a href="#" class="page-link selected">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">4</a>
+                <a href="#" class="page-link">5</a>
+                <a href="#" class="page-link">6</a>
+                <a href="#" class="page-link">7</a>
+                <a href="#" class="page-link">8</a>
+                <a href="#" class="page-link">9</a>
+                <a href="#" class="page-link">10</a>
+                <a href="#" class="page-link">＞</a>
+                <a href="#" class="page-link">≫</a>
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- 푸터 : 사이트맵+패밀리사이트, 카피라이트 -->
+    <footer>
+        <div class="footer-menu">
+            <div class="site-map">
+                <div class="item">
+                    <ul>
+                        <li>Board</li>
+                        <li>공지사항</li>
+                        <li>자유 게시판</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li>Gallery</li>
+                        <li>취미 갤러리</li>
+                        <li>자유 갤러리</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li>About</li>
+                        <li>사이트 소개</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="family-site">
+                <select name="site" id="site">
+                    <option value="1">카카오</option>
+                    <option value="2">네이버</option>
+                    <option value="3">구글</option>
+                </select>
+            </div>
+        </div>
+        <div class="copy">
+            <p>Copyright ⓒ ALOHA CLASS. All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

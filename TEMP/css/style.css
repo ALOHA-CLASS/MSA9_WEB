@@ -1,0 +1,422 @@
+
+
+/* 헤더 */
+header {
+    width: 100%;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+}
+
+.util {
+    height: 40px;
+    padding: 10px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.util .util-menu {
+    display: flex;
+    column-gap: 20px;
+    margin: 0 15px;
+}
+
+/* menu */
+.menu {
+    display: flex;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.menu .menu-left a,
+.menu .menu-right a {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    /* line-height: 80px; */
+    text-align: center;
+    background-color: var(--sub-color);
+    color: white;
+    font-size: 30px;
+}
+
+.menu .menu-left a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .menu-center nav ul li {
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+}
+
+.menu .menu-center nav ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 0 32px;
+    font-weight: bold;
+}
+
+.menu .menu-center nav ul li a:hover {
+    background-color: var(--sub-color);
+    color: white;
+}
+
+/* 햄버거 메뉴 버튼 */
+.bars {
+    display: inline-block;
+    position: relative;
+    width: 32px;
+    height: 24px;
+    top: 18px;
+    left: 3px;
+    /* background-color: rebeccapurple; */
+    cursor: pointer;
+}
+
+
+#bars { display: none; position: absolute; }
+
+.bar {
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transition: all 0.4s;
+    opacity: 1;
+}
+
+.bar.top { top: 0; left: 0; }
+.bar.mid { top: 50%; left: 0; transform: translateY(-50%); }
+.bar.bottom { bottom: 0; left: 0; }
+
+
+/* 햄버거 메뉴 체크 애니메이션 */
+#bars:checked ~ header .bars .top {
+    transform: rotate(45deg) translate(3px, -1px);
+    transform-origin: top left;
+}
+#bars:checked ~ header .bars .mid {
+    opacity: 0;
+}
+#bars:checked ~ header .bars .bottom {
+    transform: rotate(-45deg) translate(-1px, 3px);
+    transform-origin: top left;
+}
+
+/* 사이드바 */
+.sidebar {
+    width: 330px;
+    height: calc(100vh - 120px);
+    box-shadow: -2px 2px 5px rgba(0,0,0,0.6);
+    position: fixed;
+    top: 120px;
+    right: -330px;
+    transition: all 0.5s;
+    z-index: 20;
+    background-color: white;
+}
+/* 햄버거 메뉴 체크시 사이드바 슬라이드 */
+#bars:checked ~ .sidebar { right: 0; }
+
+.sidebar .sidemenu li { border-bottom: 1px solid black; }
+.sidebar .sidemenu li a { display: inline-block; width: 100%;  height: 100%; padding: 15px; } 
+.sidebar .sidemenu li a:hover { background-color: var(--sub-color); color: white; } 
+.sidebar .sidemenu li h3 { font-size: 20px; }
+.sidebar .sidemenu li p { font-size: 12px; }
+
+/* 플로팅 버튼 */
+.floating {
+    position: fixed;
+    right: 40px;
+    bottom: 80px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.6);
+    z-index: 30;
+}
+
+.floating a { 
+    display: inline-block; 
+    width: 100%;
+    height: 100%;text-align: center;
+    line-height: 47px;
+    color: var(--sub-color);
+    font-size: 40px;
+    user-select: none;
+}
+
+html { scroll-behavior: smooth; }
+
+/* 메인 */
+.container {
+    /* width: var(--container-size); */
+    max-width: var(--container-size);
+    margin: 0 auto;
+    position: relative;
+}
+
+section {
+    width: 100%;
+    min-height: 400px;
+    padding: 100px 0;
+}
+
+/* =========== 섹션01 : 메인 슬라이드 ========== */
+#section1 {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    padding-top: 0;
+}
+/* 가로 슬라이드 */
+.slide {
+    position: absolute;
+    width: calc(var(--container-size) * 3);
+    animation-name: slide;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+}
+
+.slide img {
+    width: var(--container-size);
+    height: 600px;
+    float: left;
+}
+
+@keyframes slide {
+    33.333% { left: 0; }
+    66.666% { left: calc(var(--container-size) * -1); }
+    100% { left: calc(var(--container-size) * -2);}
+}
+
+
+/* =========== 섹션02 : 카드뷰 ========== */
+#section2 {}
+
+.card-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 1px 3px 3px rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+.card .card-title {
+    text-align: center;
+    font-size: var(--text-title);
+    margin-top: 10px;
+}
+.card .card-content {
+    font-size: var(--text-normal);
+    padding: 10px 20px 40px;
+}
+.card .card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.card .card-bottom i {
+    font-size: 32px;
+    color: #FC4668;
+}
+
+/* =========== 섹션03,04 : 미디어 텍스트 섹션 ========== */
+.layout-detail {}
+.layout-detail .inner {
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+}
+.layout-detail .inner .detail-img {}
+.layout-detail .inner .detail-img img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+.layout-detail .inner .detail-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.layout-detail .inner .detail-content .content-box h3 {
+    font-size: var(--text-title);
+}
+.layout-detail .inner .detail-content .content-box p {
+    font-size: var(--text-normal);
+}
+.layout-detail .inner .detail-content .btn-box {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 120px;
+    padding: 12px 24px;
+    background-color: var(--sub-color);
+    color: white;
+    border-radius: 10px;
+}
+.layout-detail.reverse .detail-img { order: 2; }
+.layout-detail.reverse .detail-content { order: 1; }
+
+/* =========== 푸터 :  ========== */
+footer {
+    width: 100%;
+    min-height: 480px;
+    background-color: #212121;
+    margin-top: 50px;
+    position: relative;
+    color: white;
+}
+footer .footer-menu {
+    display: flex;
+    justify-content: center;
+    column-gap: 400px;
+    padding-top: 50px;
+    padding-right: 200px;
+}
+footer .footer-menu .site-map {
+    display: flex;
+    column-gap: 100px;
+}
+footer .footer-menu .site-map .item ul li {
+    margin: 20px 0;
+}
+footer .footer-menu .family-site {}
+footer .footer-menu .family-site select {
+    position: relative;
+    padding: 10px 30px;
+    top: 15px;left: 60px;
+}
+footer .copy {
+    text-align: center;
+    padding: 50px;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+
+/* ===================== 👩‍🏫 게시판 ===================== */
+.main-title { font-size: var(--text-title); margin-bottom: 20px; }
+
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-input, .filter-select, .search-button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-input {
+    flex: 2;
+    margin-right: 10px;
+}
+
+.filter-select {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.search-button {
+    flex: 0.5;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.board-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.board-list th, .board-list td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.board-list th {
+    background-color: #f4f4f4;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-link {
+    margin: 0 5px;
+    padding: 4px 10px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #007BFF;
+    box-sizing: border-box;
+}
+
+.page-link.selected {
+    background-color: #007BFF;
+    color: white;
+}
+
+.page-link:hover {
+    background-color: #f4f4f4;
+}
+
+.page-link.active {
+    background-color: #007BFF;
+    color: white;
+}
+
+
+
+/* ===================== 👩‍🎨 갤러리 ===================== */
+/* Masonry 갤러리 스타일 */
+.grid {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.grid-item {
+    width: 250px; /* 고정된 폭 */
+    margin-bottom: 10px; /* 이미지 간의 간격 */
+}
+
+.grid-item img {
+    width: 100%; /* 이미지가 그리드 아이템의 너비에 맞게 채워지도록 설정 */
+    display: block;
+    border-radius: 10px;
+}
+
