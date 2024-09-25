@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board</title>
+    <title>게시판</title>
     <!-- 아이콘 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> 
     <link rel="stylesheet" href="css/reset.css">
@@ -53,8 +53,8 @@
         <!-- util -->
         <div class="util">
             <ul class="util-menu">
-                <li><a href="">로그인</a></li>
-                <li><a href="">회원가입</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="join.html">회원가입</a></li>
             </ul>
         </div>
         <!-- menu -->
@@ -89,32 +89,36 @@
     <div class="container">
         <section>
             <h1 class="main-title">게시판</h1>
-            <!-- 검색창 -->
+    
             <div class="search-filter">
+                <!-- 검색UI -->
                 <div class="item">
-                    <select class="filter-select">
-                        <option value="0">전체</option>
-                        <option value="1">제목+내용</option>
-                        <option value="2">제목</option>
-                        <option value="3">작성자</option>
-                        <option value="4">내용</option>
-                    </select>
-                    <input type="text" placeholder="검색어를 입력하세요" class="search-input">
-                    <button class="search-button">검색</button>
-                </div>
+                    <form action="/board" method="get">
+                        <select name="category" id="category" class="filter-select">
+                            <option value="0">전체</option>
+                            <option value="1">제목+내용</option>
+                            <option value="2">제목</option>
+                            <option value="3">작성자</option>
+                            <option value="4">내용</option>
+                        </select>
+                        <input type="text" placeholder="검색어를 입력하세요" name="keyword" class="search-input">
+                        <input type="submit" class="search-button" value="검색">
+                    </form>
+                </div>            
+                <!-- 필터 -->
                 <div class="item">
-                    <select class="filter-select">
+                    <select name="rows" id="rows" class="filter-select">
                         <option value="5">5개씩</option>
                         <option value="10">10개씩</option>
                         <option value="20">20개씩</option>
                         <option value="30">30개씩</option>
                         <option value="40">40개씩</option>
-                        <option value="50">60개씩</option>
+                        <option value="50">50개씩</option>
                     </select>
                 </div>
             </div>
-
-            <!-- 게시판 목록 -->
+    
+            <!-- 게시글 목록 -->
             <table class="board-list">
                 <thead>
                     <tr>
@@ -125,89 +129,84 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- (tr>(td{$}+td{게시글 제목 $}+td{작성자$}+td{2024-09-$$}))*10 -->
                     <tr>
                         <td>1</td>
-                        <td>게시물 제목 1</td>
+                        <td>게시글 제목 1</td>
                         <td>작성자1</td>
-                        <td>2024-09-24</td>
+                        <td>2024-09-01</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>게시물 제목 2</td>
+                        <td>게시글 제목 2</td>
                         <td>작성자2</td>
-                        <td>2024-09-23</td>
+                        <td>2024-09-02</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>게시물 제목 3</td>
+                        <td>게시글 제목 3</td>
                         <td>작성자3</td>
-                        <td>2024-09-22</td>
+                        <td>2024-09-03</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>게시물 제목 4</td>
+                        <td>게시글 제목 4</td>
                         <td>작성자4</td>
-                        <td>2024-09-21</td>
+                        <td>2024-09-04</td>
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>게시물 제목 5</td>
+                        <td>게시글 제목 5</td>
                         <td>작성자5</td>
-                        <td>2024-09-20</td>
+                        <td>2024-09-05</td>
                     </tr>
                     <tr>
                         <td>6</td>
-                        <td>게시물 제목 6</td>
+                        <td>게시글 제목 6</td>
                         <td>작성자6</td>
-                        <td>2024-09-19</td>
+                        <td>2024-09-06</td>
                     </tr>
                     <tr>
                         <td>7</td>
-                        <td>게시물 제목 7</td>
+                        <td>게시글 제목 7</td>
                         <td>작성자7</td>
-                        <td>2024-09-18</td>
+                        <td>2024-09-07</td>
                     </tr>
                     <tr>
                         <td>8</td>
-                        <td>게시물 제목 8</td>
+                        <td>게시글 제목 8</td>
                         <td>작성자8</td>
-                        <td>2024-09-17</td>
+                        <td>2024-09-08</td>
                     </tr>
                     <tr>
                         <td>9</td>
-                        <td>게시물 제목 9</td>
+                        <td>게시글 제목 9</td>
                         <td>작성자9</td>
-                        <td>2024-09-16</td>
+                        <td>2024-09-09</td>
                     </tr>
                     <tr>
                         <td>10</td>
-                        <td>게시물 제목 10</td>
+                        <td>게시글 제목 10</td>
                         <td>작성자10</td>
-                        <td>2024-09-15</td>
+                        <td>2024-09-10</td>
                     </tr>
                 </tbody>
             </table>
-            
-
+    
             <!-- 페이지네이션 -->
-            <div class="pagination">
-                <a href="#" class="page-link">≪</a>
-                <a href="#" class="page-link">＜</a>
-                <a href="#" class="page-link selected">1</a>
-                <a href="#" class="page-link">2</a>
-                <a href="#" class="page-link">3</a>
-                <a href="#" class="page-link">4</a>
-                <a href="#" class="page-link">5</a>
-                <a href="#" class="page-link">6</a>
-                <a href="#" class="page-link">7</a>
-                <a href="#" class="page-link">8</a>
-                <a href="#" class="page-link">9</a>
-                <a href="#" class="page-link">10</a>
-                <a href="#" class="page-link">＞</a>
-                <a href="#" class="page-link">≫</a>
+            <div class="pagenation">
+                <!-- ≪ ＜ ＞ ≫ -->
+                <a href="" class="page-link">≪</a>
+                <a href="" class="page-link">＜</a>
+                <a href="" class="page-link selected">1</a>
+                <a href="" class="page-link">2</a>
+                <a href="" class="page-link">3</a>
+                <a href="" class="page-link">4</a>
+                <a href="" class="page-link">5</a>
+                <a href="" class="page-link">＞</a>
+                <a href="" class="page-link">≫</a>
             </div>
         </section>
-        
     </div>
 
     <!-- 푸터 : 사이트맵+패밀리사이트, 카피라이트 -->

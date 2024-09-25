@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board</title>
+    <title>게시판</title>
     <!-- 아이콘 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Masonry JS -->
+    <!-- Masonry 라이브러리 (벽돌쌓기 라이브러리) -->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </head>
 <body>
@@ -35,6 +35,18 @@
                     <p>사이드바 메뉴 설명</p>
                 </a>
             </li>
+            <li>
+                <a href="">
+                    <h3>사이드바</h3>
+                    <p>사이드바 메뉴 설명</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <h3>사이드바</h3>
+                    <p>사이드바 메뉴 설명</p>
+                </a>
+            </li>
         </ul>
     </div>
 
@@ -43,8 +55,8 @@
         <!-- util -->
         <div class="util">
             <ul class="util-menu">
-                <li><a href="">로그인</a></li>
-                <li><a href="">회원가입</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="join.html">회원가입</a></li>
             </ul>
         </div>
         <!-- menu -->
@@ -72,43 +84,47 @@
                 </a>
             </div>
         </div>
+
     </header>
     
     <!-- 메인 -->
     <div class="container">
         <section class="gallery">
-            <h1 class="main-title txt-center">Gallery</h1>
-            <!-- Masonry Grid 갤러리 -->
+            <h1 class="main-title txt-center">갤러리</h1>
             <div class="grid">
-                <div class="grid-item"><img src="https://via.placeholder.com/250x400" alt="Gallery Image 1"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x300" alt="Gallery Image 2"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x500" alt="Gallery Image 3"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x250" alt="Gallery Image 4"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x350" alt="Gallery Image 5"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x450" alt="Gallery Image 6"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x400" alt="Gallery Image 1"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x300" alt="Gallery Image 2"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x500" alt="Gallery Image 3"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x250" alt="Gallery Image 4"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x350" alt="Gallery Image 5"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x450" alt="Gallery Image 6"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x400" alt="Gallery Image 1"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x300" alt="Gallery Image 2"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x500" alt="Gallery Image 3"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x250" alt="Gallery Image 4"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x350" alt="Gallery Image 5"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x450" alt="Gallery Image 6"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x400" alt="Gallery Image 1"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x300" alt="Gallery Image 2"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x500" alt="Gallery Image 3"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x250" alt="Gallery Image 4"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x350" alt="Gallery Image 5"></div>
-                <div class="grid-item"><img src="https://via.placeholder.com/250x450" alt="Gallery Image 6"></div>
+                <!-- https://via.placeholder.com/가로x세로 -->
+                <div class="grid-item"><img src="https://via.placeholder.com/250x400" alt="image 1"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x300" alt="image 2"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x600" alt="image 3"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x500" alt="image 4"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x250" alt="image 5"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x400" alt="image 6"></div>
+                
+                <div class="grid-item"><img src="https://via.placeholder.com/250x400" alt="image 1"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x300" alt="image 2"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x600" alt="image 3"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x500" alt="image 4"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x250" alt="image 5"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x400" alt="image 6"></div>
+    
+                <div class="grid-item"><img src="https://via.placeholder.com/250x400" alt="image 1"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x300" alt="image 2"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x600" alt="image 3"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x500" alt="image 4"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x250" alt="image 5"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x400" alt="image 6"></div>
+    
+                <div class="grid-item"><img src="https://via.placeholder.com/250x400" alt="image 1"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x300" alt="image 2"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x600" alt="image 3"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x500" alt="image 4"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x250" alt="image 5"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/250x400" alt="image 6"></div>
             </div>
         </section>
     </div>
 
-    <!-- 푸터 -->
+    <!-- 푸터 : 사이트맵+패밀리사이트, 카피라이트 -->
     <footer>
         <div class="footer-menu">
             <div class="site-map">
@@ -146,14 +162,15 @@
         </div>
     </footer>
     
-    <!-- Masonry 초기화 스크립트 -->
     <script>
+        // 벽돌쌓기 라이브러리 초기화 코드
         var elem = document.querySelector('.grid');
-        var msnry = new Masonry(elem, {
+        var msnry = new Masonry( elem, {
+            // options
             itemSelector: '.grid-item',
             columnWidth: 250,
             gutter: 10,
-            fitWidth: true
+            fitWidth: true,
         });
     </script>
 </body>
