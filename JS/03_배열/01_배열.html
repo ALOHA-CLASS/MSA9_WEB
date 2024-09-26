@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+    <script>
+        // 배열 생성 : new Array(초기값)
+        const array = new Array(1,2,3,4,5)
+
+        // forEach(콜백함수(요소, 인덱스, 배열) { 반복실행문장 })
+        array.forEach(function(item, index, array) {
+            document.write(`<h1>${item}</h1>`)
+        });
+
+        // push()   : 요소를 맨 끝에 추가
+        array.push(10)
+        console.log(array);
+        
+        // pop()    : 요소를 맨 끝에서 제거
+        array.pop()
+        console.log(array);
+
+        // -------------------------------------------
+        let list = ['Harry', 'Alice', 'Steven', 'Chris', 'Tomas']
+        // sort()       : 오름차순 정렬
+        list.sort()
+        console.log(list);
+
+        // reverse()    : 내림차순 정렬
+        list.reverse()
+        console.log(list);
+        
+        // map()        : 요소를 전체 반복하면서 새로운 형태도 매핑하여 반환
+        let specialList = list.map(function(name, index) {
+            return name + (parseInt(index) + 1)
+        })
+        console.log(specialList);
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 선택 - selector</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => { 
+            // querySelector() : 선택자로 요소를 선택
+            const $ul = document.querySelector('.product-list ul')
+            $ul.style.listStyleType = 'none'
+
+            const imagePath = prompt('이미지 경로를 입력해주세요')
+            // querySelectorAll() : 선택자로 여러 요소 선택
+            const lists = document.querySelectorAll('.product-list ul li')
+
+            lists.forEach(li => {
+                li.children[0].src = imagePath
+                li.children[0].style.width = '300px'
+                // 요소.children        : 해당 요소의 자식요소들을 가진 속성
+                // li.children[0]       : <li> 자식요소의 0번재 ➡ <img>
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="product-list">
+        <ul>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>
