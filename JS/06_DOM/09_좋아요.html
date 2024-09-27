@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좋아요</title>
+    <!-- material icons -->
+    <!-- FILL : 0..1 로 해야 outline, fill 모두 사용가능 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+        .title { 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+        }
+        .title .item {
+            display: flex;
+            align-items: center;
+            column-gap: 6px;
+        }
+        .title .item img {
+            width: 32px;
+            height: 32px;
+            position: relative;
+            top: 3px;
+        }
+        .title .item .icon {
+            display: flex;
+            align-items: center;
+        }
+        .content .img-box img { 
+            width: 100%; 
+            height: 340px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .action-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 10px;
+        }
+        .action-box .item {
+            display: flex;
+            column-gap: 18px;
+        }
+        .icon { cursor: pointer; user-select: none;}
+        .icon-heart.selected {
+            color: red;
+        }
+        .icon.selected {
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+            
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="feed-list">
+            <div class="feed">
+                <div class="title">
+                    <div class="item">
+                        <div class="avatar">
+                            <img src="img/avatar.png" alt="프로필">
+                        </div>
+                        <div class="wrtier">
+                            my_account
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <!-- ... 더보기 아이콘 -->
+                            <span class="material-symbols-outlined icon">more_horiz</span>
+                        </div>
+                    </div>
+                </div>  <!-- .title 끝 -->
+                <div class="content">
+                    <div class="img-box" id="imgBox">
+                        <img src="img/content.jpg" alt="피드 이미지">
+                    </div>
+                    <div class="content-box">
+                        <p class="text"></p>
+                    </div>
+                </div><!-- .content 끝 -->
+                <div class="action-box">
+                    <div class="item">
+                        <!-- 좋아요 아이콘 -->
+                        <span class="material-symbols-outlined icon icon-heart">favorite</span>
+                        <!-- 댓글 아이콘 -->
+                        <span class="material-symbols-outlined icon">chat_bubble</span>
+                        <!-- DM 아이콘 -->
+                        <span class="material-symbols-outlined icon">send</span>
+                    </div>
+                    <div class="item">
+                        <!-- 스크랩 아이콘 -->
+                        <span class="material-symbols-outlined icon">bookmark</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+        const icons = document.getElementsByClassName('icon')
+        let heartIcon = ''
+        for (let i = 0; i < icons.length; i++) {
+            const icon = icons[i]
+            if( icon.classList.contains('icon-heart') )
+                heartIcon = icon
+            icon.addEventListener('click', (event) => {
+                icon.classList.toggle('selected')
+            })
+        }
+        // 하트 아이콘 클릭 이벤트
+        heartIcon.addEventListener('click', (event) => {
+            if( heartIcon.classList.contains('selected') )
+                heartAlert()
+        })
+
+        const imgBox = document.getElementById('imgBox')
+        // 더클 클릭 이벤트 타입 : dblclick
+        imgBox.addEventListener('dblclick', (event) => {
+            // alert('더블 클릭!')
+            if( !heartIcon.classList.contains('selected') )
+                heartAlert()
+            heartIcon.classList.toggle('selected')
+        })
+
+        function heartAlert() {
+            Swal.fire({
+                title: "Like it!",
+                text: "좋아요",
+                imageUrl: "./img/heart.gif",
+                imageWidth: 200,
+                // imageHeight: 200,
+                imageAlt: "Heart Image",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        }
+    </script>
+</body>
+</html>

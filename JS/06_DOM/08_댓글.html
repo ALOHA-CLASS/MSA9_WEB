@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>댓글 기능</title>
+    <style>
+        .comment {
+            margin: 50px auto;
+        }
+        .comment-list {
+            border: 1px solid cornflowerblue;
+            max-width: 480px;
+        }
+        .comment-card {
+            padding: 10px;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+        }
+        .comment-card .title { 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .comment-card .title .item {
+            display: flex;
+            align-items: center;
+        }
+        .comment-card .content-box { font-size: 14px; }
+        .input-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            row-gap: 10px;
+            max-width: 480px;
+        }
+        .btn-box {
+            display: flex;
+            justify-content: flex-end;
+        }
+        #commentBtn {
+            background-color: transparent;
+            border: 1px solid royalblue;
+            padding: 6px 24px;
+            color: royalblue;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        #commentBtn:hover {
+            background-color: royalblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section class="comment">
+        <h2>댓글 목록</h2>
+        <div class="comment-list" id="commentList">
+            <!-- 여기에 댓글 항목들을 추가 -->
+            <div class="comment-card">
+                <div class="title">
+                    <div class="item">
+                        <div class="avatar">
+                            <img src="img/avatar.png" alt="프로필">
+                        </div>
+                        <div class="writer">김조은</div>
+                    </div>
+                    <div class="item">
+                        <div class="date">2024-09-27</div>
+                    </div>
+                </div>
+                <div class="content-box">
+                    <p class="content">
+                        언제 복습하실 겁니까? 벌써 2달째 입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h3>댓글 작성</h3>
+        <div class="input-box">
+            <input type="text" name="writer" id="writer" placeholder="이름을 작성해주세요.">
+            <textarea name="content" id="content" rows="3" cols="50" placeholder="내용을 입력하세요."></textarea>
+            <div class="btn-box">
+                <button id="commentBtn">작성</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        // 댓글 추가
+        function addComment() {
+            const writer = document.getElementById('writer').value
+            const content = document.getElementById('content').value
+            // 날짜
+            const today = new Date()
+            const date = today.toISOString().slice(0,10) // 2024-09-27
+            let commentCard = `<div class="comment-card">
+                <div class="title">
+                    <div class="item">
+                        <div class="avatar">
+                            <img src="img/avatar.png" alt="프로필">
+                        </div>
+                        <div class="writer">${writer}</div>
+                    </div>
+                    <div class="item">
+                        <div class="date">${date}</div>
+                    </div>
+                </div>
+                <div class="content-box">
+                    <p class="content">
+                        ${content}
+                    </p>
+                </div>
+            </div>`
+
+            const commentList = document.getElementById('commentList')
+            const card = document.createElement('div')
+            card.innerHTML = commentCard
+            commentList.appendChild(card)
+
+            document.getElementById('writer').value = ''
+            document.getElementById('content').value = ''
+        }
+
+        // [작성] 버튼 클릭 이벤트
+        const btn = document.getElementById('commentBtn')
+        btn.addEventListener('click', (event) => {
+            addComment()
+        })
+        
+    </script>
+</body>
+</html>
