@@ -1,7 +1,7 @@
 $(function() {
     // 이벤트 처리 메소드
     // - on('이벤트 타입', 콜백함수{})
-    // * 이벤트 타입 : clikc, keyup, chagne, ...
+    // * 이벤트 타입 : click, keyup, chagne, ...
     /*
         콜백함수
         - function()    : $(this) 사용가능
